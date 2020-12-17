@@ -5,14 +5,14 @@ import android.os.Bundle;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.common.PageAnnotationHandler;
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.foolman.common.BaseActivity;
+import com.sankuai.waimai.router.demo.constants.Constant;
 import com.sankuai.waimai.router.fragment.v4.FragmentTransactionUriRequest;
 
 /**
  * Created by hailiangliao on 2017/12/13.
  */
-@RouterUri(path = DemoConstant.TEST_FRAGMENT_TO_FRAGMENT_ACTIVITY)
+@RouterUri(path = Constant.TEST_FRAGMENT_TO_FRAGMENT_ACTIVITY)
 public class FragmentToFragmentDemoActivity extends BaseActivity {
 
     @Override
@@ -23,7 +23,7 @@ public class FragmentToFragmentDemoActivity extends BaseActivity {
     }
 
     private void launchFragment() {
-        new FragmentTransactionUriRequest(this, PageAnnotationHandler.SCHEME_HOST + DemoConstant.TEST_DEMO_FRAGMENT_1)
+        new FragmentTransactionUriRequest(this, PageAnnotationHandler.SCHEME_HOST + Constant.TEST_DEMO_FRAGMENT_1)
                 .add(R.id.fragment_container)
                 .allowingStateLoss()
                 .start();

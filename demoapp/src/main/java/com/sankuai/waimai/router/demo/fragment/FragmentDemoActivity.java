@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.foolman.common.BaseActivity;
 import com.sankuai.waimai.router.annotation.RouterUri;
+import com.sankuai.waimai.router.demo.constants.Constant;
 
 /**
  * Created by hailiangliao on 2017/12/13.
  */
-@RouterUri(path = DemoConstant.JUMP_FRAGMENT_ACTIVITY)
+@RouterUri(path = Constant.JUMP_FRAGMENT_ACTIVITY)
 public class FragmentDemoActivity extends BaseActivity {
 
     @Override

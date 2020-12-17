@@ -35,17 +35,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".basic.TestBasicActivity" />
-        <activity android:name=".basic.TestUriRequestActivity" />
-        <activity android:name=".basic.ExportedActivity" />
-        <activity android:name=".basic.NotExportedActivity" />
+        <activity android:name="com.foolman.test.page.TestBasicActivity" />
+        <activity android:name="com.foolman.test.page.TestUriRequestActivity" />
+        <activity android:name="com.foolman.test.page.ExportedActivity" />
+        <activity android:name="com.foolman.test.page.NotExportedActivity" />
         <activity android:name=".advanced.AdvancedDemoActivity" />
-        <activity android:name=".advanced.account.LoginActivity" />
-        <activity android:name=".advanced.account.UserAccountActivity" />
-        <activity android:name=".advanced.location.NearbyShopActivity" />
-        <activity android:name=".advanced.webview.WebViewActivity" />
-        <activity android:name=".advanced.abtest.HomeActivityA" />
-        <activity android:name=".advanced.abtest.HomeActivityB" />
+        <activity android:name="com.foolman.login.LoginActivity" />
+        <activity android:name="com.foolman.login.UserAccountActivity" />
+        <activity android:name="com.foolman.location.NearbyShopActivity" />
+        <activity android:name="com.foolman.web.WebViewActivity" />
+        <activity android:name="com.foolman.test.ab.HomeActivityA" />
+        <activity android:name="com.foolman.test.ab.HomeActivityB" />
         <activity android:name=".fragment.FragmentDemoActivity" />
         <activity android:name=".fragment2fragment.FragmentToFragmentDemoActivity"/>
     </application>

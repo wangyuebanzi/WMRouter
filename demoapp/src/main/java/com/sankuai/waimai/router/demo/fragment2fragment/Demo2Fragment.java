@@ -15,14 +15,14 @@ import com.sankuai.waimai.router.common.FragmentUriRequest;
 import com.sankuai.waimai.router.core.OnCompleteListener;
 import com.sankuai.waimai.router.core.UriRequest;
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.basic.TestUriRequestActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
-import com.sankuai.waimai.router.demo.lib2.ToastUtils;
+import com.foolman.test.page.TestUriRequestActivity;
+import com.foolman.common.util.ToastUtils;
+import com.sankuai.waimai.router.demo.constants.Constant;
 
 /**
  * Created by hailiangliao on 2017/12/25.
  */
-@RouterPage(path = DemoConstant.TEST_DEMO_FRAGMENT_2, interceptors = DemoFragmentInterceptor.class)
+@RouterPage(path = Constant.TEST_DEMO_FRAGMENT_2, interceptors = DemoFragmentInterceptor.class)
 public class Demo2Fragment extends Fragment {
 
     public static Demo2Fragment newInstance() {
@@ -48,7 +48,7 @@ public class Demo2Fragment extends Fragment {
         v.findViewById(R.id.btn_jump).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new FragmentUriRequest(Demo2Fragment.this, DemoConstant.JUMP_ACTIVITY_1)
+                new FragmentUriRequest(Demo2Fragment.this, com.foolman.testapi.constants.Constant.JUMP_ACTIVITY_1)
                         .activityRequestCode(100)
                         .putExtra(TestUriRequestActivity.INTENT_TEST_INT, 1)
                         .putExtra(TestUriRequestActivity.INTENT_TEST_STR, "str")

@@ -10,20 +10,20 @@ import android.widget.LinearLayout;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.annotation.RouterUri;
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
+import com.foolman.common.BaseActivity;
+import com.sankuai.waimai.router.demo.constants.Constant;
 
 /**
  * Created by jzj on 2018/3/19.
  */
-@RouterUri(path = DemoConstant.ADVANCED_DEMO)
+@RouterUri(path = com.sankuai.waimai.router.demo.constants.Constant.ADVANCED_DEMO)
 public class AdvancedDemoActivity extends BaseActivity {
 
     public static final String[] URIS = {
 
             // Interceptor测试
-            DemoConstant.ACCOUNT_WITH_LOGIN_INTERCEPTOR,
-            DemoConstant.NEARBY_SHOP_WITH_LOCATION_INTERCEPTOR,
+            com.foolman.loginapi.constants.Constant.ACCOUNT_WITH_LOGIN_INTERCEPTOR,
+            com.foolman.locationapi.constants.Constant.NEARBY_SHOP_WITH_LOCATION_INTERCEPTOR,
 
             // 正则测试
             "http://www.meituan.com",
@@ -33,13 +33,13 @@ public class AdvancedDemoActivity extends BaseActivity {
             "/browser?url=http%3a%2f%2fwww.meituan.com",
 
             // UriHandler显示Toast
-            DemoConstant.SHOW_TOAST_HANDLER,
+            com.foolman.common.constants.Constant.SHOW_TOAST_HANDLER,
 
             // 根据AB策略跳转不同页面
-            DemoConstant.HOME_AB_TEST,
+            com.foolman.testapi.constants.Constant.HOME_AB_TEST,
 
             // ServiceLoader测试
-            DemoConstant.SERVICE_LOADER,
+            Constant.SERVICE_LOADER,
     };
 
     @Override

@@ -1,1 +1,38 @@
-include ':interfaces', ':router', ':compiler', ':plugin', ':demoapp', ':demolib1', ':demolib2', ':demokotlin'
+include ':interfaces', ':router', ':compiler', ':plugin', ':demoapp'
+
+include ':common'
+
+include ':demokotlin'
+project(':demokotlin').projectDir = new File(rootDir, 'biz/demokotlin')
+include ':demokotlinapi'
+project(':demokotlinapi').projectDir = new File(rootDir, 'biz/demokotlinapi')
+
+include ':demolib1'
+project(':demolib1').projectDir = new File(rootDir, 'biz/demolib1')
+include ':demolib1api'
+project(':demolib1api').projectDir = new File(rootDir, 'biz/demolib1api')
+
+include ':demolib2'
+project(':demolib2').projectDir = new File(rootDir, 'biz/demolib2')
+include ':demolib2api'
+project(':demolib2api').projectDir = new File(rootDir, 'biz/demolib2api')
+
+include ':location'
+project(':location').projectDir = new File(rootDir, 'biz/location')
+include ':locationapi'
+project(':locationapi').projectDir = new File(rootDir, 'biz/locationapi')
+
+include ':login'
+project(':login').projectDir = new File(rootDir, 'biz/login')
+include ':loginapi'
+project(':loginapi').projectDir = new File(rootDir, 'biz/loginapi')
+
+include ':web'
+project(':web').projectDir = new File(rootDir, 'biz/web')
+include ':webapi'
+project(':webapi').projectDir = new File(rootDir, 'biz/webapi')
+
+include ':test'
+project(':test').projectDir = new File(rootDir, 'biz/test')
+include ':testapi'
+project(':testapi').projectDir = new File(rootDir, 'biz/testapi')
