@@ -42,7 +42,12 @@ dependencies {
     api 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
 
+    api project(path: ':test')
+    api project(path: ':web')
+    api project(path: ':location')
+    api project(path: ':login')
     api project(path: ':demolib1')
+    api project(path: ':demolib2')
     api project(path: ':demokotlin')
     annotationProcessor project(path: ':compiler')
 }

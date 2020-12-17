@@ -8,14 +8,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.foolman.demolib1api.contants.Contants;
+import com.foolman.test.page.TestUriRequestActivity;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.common.DefaultUriRequest;
 import com.sankuai.waimai.router.core.OnCompleteListener;
 import com.sankuai.waimai.router.core.UriRequest;
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.BaseActivity;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
-import com.sankuai.waimai.router.demo.lib2.ToastUtils;
+import com.foolman.common.BaseActivity;
+import com.foolman.demolib2api.contants.Constant;
+import com.foolman.common.util.ToastUtils;
 
 /**
  * 基本用法Demo
@@ -27,39 +29,39 @@ public class MainActivity extends BaseActivity {
 
     public static final String[] URIS = {
             // 基本页面跳转，支持不配置Scheme、Host，支持多个path
-            DemoConstant.JUMP_ACTIVITY_1,
-            DemoConstant.JUMP_ACTIVITY_2,
+            com.foolman.testapi.constants.Constant.JUMP_ACTIVITY_1,
+            com.foolman.testapi.constants.Constant.JUMP_ACTIVITY_2,
 
             // Kotlin
-            DemoConstant.KOTLIN,
+            com.foolman.demokotlinapi.Constant.KOTLIN,
 
             // request跳转测试
-            DemoConstant.JUMP_WITH_REQUEST,
+            com.foolman.testapi.constants.Constant.JUMP_WITH_REQUEST,
 
             // 自定义Scheme、Host测试；外部跳转测试
-            DemoConstant.DEMO_SCHEME + "://" + DemoConstant.DEMO_HOST
-                    + DemoConstant.EXPORTED_PATH,
-            DemoConstant.DEMO_SCHEME + "://" + DemoConstant.DEMO_HOST
-                    + DemoConstant.NOT_EXPORTED_PATH,
+            com.foolman.testapi.constants.Constant.DEMO_SCHEME + "://" + com.foolman.testapi.constants.Constant.DEMO_HOST
+                    + com.foolman.testapi.constants.Constant.EXPORTED_PATH,
+            com.foolman.testapi.constants.Constant.DEMO_SCHEME + "://" + com.foolman.testapi.constants.Constant.DEMO_HOST
+                    + com.foolman.testapi.constants.Constant.NOT_EXPORTED_PATH,
 
             // Library工程测试
-            DemoConstant.TEST_LIB1,
-            DemoConstant.TEST_LIB2,
+            Contants.TEST_LIB1,
+            Constant.TEST_LIB2,
 
             // 拨打电话
-            DemoConstant.TEL,
+            com.sankuai.waimai.router.demo.constants.Constant.TEL,
 
             // 降级策略
-            DemoConstant.TEST_NOT_FOUND,
+            com.sankuai.waimai.router.demo.constants.Constant.TEST_NOT_FOUND,
 
             // Fragment test
-            DemoConstant.JUMP_FRAGMENT_ACTIVITY,
+            com.sankuai.waimai.router.demo.constants.Constant.JUMP_FRAGMENT_ACTIVITY,
 
             // Fragment to Fragment test
-            DemoConstant.TEST_FRAGMENT_TO_FRAGMENT_ACTIVITY,
+            com.sankuai.waimai.router.demo.constants.Constant.TEST_FRAGMENT_TO_FRAGMENT_ACTIVITY,
 
             // 高级Demo页面
-            DemoConstant.ADVANCED_DEMO,
+            com.sankuai.waimai.router.demo.constants.Constant.ADVANCED_DEMO,
     };
 
     @Override
@@ -86,7 +88,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void jump(String uri) {
-        if (DemoConstant.JUMP_WITH_REQUEST.equals(uri)) {
+        if (com.foolman.testapi.constants.Constant.JUMP_WITH_REQUEST.equals(uri)) {
             new DefaultUriRequest(this, uri)
                     .activityRequestCode(100)
                     .putExtra(TestUriRequestActivity.INTENT_TEST_INT, 1)

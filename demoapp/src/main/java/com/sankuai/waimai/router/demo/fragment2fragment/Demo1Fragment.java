@@ -14,8 +14,8 @@ import com.sankuai.waimai.router.common.PageAnnotationHandler;
 import com.sankuai.waimai.router.core.OnCompleteListener;
 import com.sankuai.waimai.router.core.UriRequest;
 import com.sankuai.waimai.router.demo.R;
-import com.sankuai.waimai.router.demo.lib2.DemoConstant;
-import com.sankuai.waimai.router.demo.lib2.ToastUtils;
+import com.foolman.common.util.ToastUtils;
+import com.sankuai.waimai.router.demo.constants.Constant;
 import com.sankuai.waimai.router.fragment.v4.FragmentBuildUriRequest;
 import com.sankuai.waimai.router.fragment.v4.FragmentTransactionUriRequest;
 
@@ -23,7 +23,7 @@ import com.sankuai.waimai.router.fragment.v4.FragmentTransactionUriRequest;
  * Created by hailiangliao on 2017/12/25.
  * Update by chenmeng06 on 2019/3/6
  */
-@RouterPage(path = DemoConstant.TEST_DEMO_FRAGMENT_1, interceptors = DemoFragmentInterceptor.class)
+@RouterPage(path = Constant.TEST_DEMO_FRAGMENT_1, interceptors = DemoFragmentInterceptor.class)
 public class Demo1Fragment extends Fragment {
 
     public static Demo1Fragment newInstance() {
@@ -46,7 +46,7 @@ public class Demo1Fragment extends Fragment {
         v.findViewById(R.id.btn_jump).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new FragmentTransactionUriRequest(Demo1Fragment.this.getActivity(), PageAnnotationHandler.SCHEME_HOST + DemoConstant.TEST_DEMO_FRAGMENT_2)
+                new FragmentTransactionUriRequest(Demo1Fragment.this.getActivity(), PageAnnotationHandler.SCHEME_HOST + com.sankuai.waimai.router.demo.constants.Constant.TEST_DEMO_FRAGMENT_2)
                         .replace(R.id.fragment_container)
                         .putExtra("message","HelloWorld") //测试参数
                         .onComplete(new OnCompleteListener() {
@@ -71,7 +71,7 @@ public class Demo1Fragment extends Fragment {
         v.findViewById(R.id.btn_cus_jump).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new FragmentBuildUriRequest(Demo1Fragment.this.getContext(), PageAnnotationHandler.SCHEME_HOST + DemoConstant.TEST_DEMO_FRAGMENT_2)
+                new FragmentBuildUriRequest(Demo1Fragment.this.getContext(), PageAnnotationHandler.SCHEME_HOST + Constant.TEST_DEMO_FRAGMENT_2)
                         .putExtra("message","HelloWorld") //测试参数
                         .onComplete(new OnCompleteListener() {
                             @Override

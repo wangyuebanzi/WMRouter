@@ -12,11 +12,12 @@ import com.sankuai.waimai.router.common.DefaultRootUriHandler;
 import com.sankuai.waimai.router.components.DefaultLogger;
 import com.sankuai.waimai.router.components.DefaultOnCompleteListener;
 import com.sankuai.waimai.router.core.Debugger;
+import com.sankuai.waimai.router.demo.constants.Key;
 
 /**
  * Created by jzj on 2018/3/19.
  */
-@RouterService(interfaces = Context.class, key = "/application", singleton = true)
+@RouterService(interfaces = Context.class, key = Key.APPLICATION, singleton = true)
 public class DemoApplication extends Application {
 
     @RouterProvider
